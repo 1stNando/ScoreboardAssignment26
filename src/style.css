@@ -68,3 +68,15 @@ fieldset i.add {
 fieldset i.subtract {
   color: #f64545;
 }
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
