@@ -89,13 +89,7 @@ h1 {
   text-align: center;
 }
 
-.team {
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
+
 
 label {
   font-weight: bold;
@@ -129,11 +123,24 @@ button:hover {
 span {
   font-weight: bold;
 }
+.team {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 20px;
+  height: 65vh;
+}
+
+.team:first-child {
+  margin-right: 1px;
+}
+.team:last-child {
+  margin-left: 1px;
+}
 
 .flexboxSet {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  
-
+  justify-content: center;
 }
