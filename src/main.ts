@@ -75,5 +75,21 @@ if (team2ScoreButton) {
   })
 }
 
+
+// Add event listeners to the subtract buttons
+const team1SubtractButton = document.getElementById("team1-subtract-button");
+if (team1SubtractButton) {
+  team1SubtractButton.addEventListener("click", (event) => {
+    handleScoreUpdate(event, team1, -1);
+  });
+}
+
+const team2SubtractButton = document.getElementById("team2-subtract-button");
+if (team2SubtractButton) {
+  team2SubtractButton.addEventListener("click", (event) => {
+    handleScoreUpdate(event, team2, -1);
+  });
+}
+
 // Initialize the scoreboard display
 updateScoreboard()
