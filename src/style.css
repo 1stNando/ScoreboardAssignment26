@@ -127,3 +127,8 @@ button:hover {
 span {
   font-weight: bold;
 }
+
+.flexboxSet {
+  display: flex;
+  flex-wrap: wrap;
+}
