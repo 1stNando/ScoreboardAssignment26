@@ -21,6 +21,7 @@ function updateScoreboard() {
   const team1NameElement = document.getElementById('team1-name')!
   const team2NameElement = document.getElementById('team2-name')!
 
+  // Handle a winner message via TS
   const winnerMessageElement = document.getElementById("winner-message")
 
   // Update the score display for each team
