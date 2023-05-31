@@ -39,7 +39,7 @@ function handleNameChange(event: Event, team: Team) {
 
 // Function to handle score updates
 function handleScoreUpdate(_event: Event, team: Team, value: number) {
-  if (team.score + value <= 21 && team.score + value >= 0) {
+  if (team.score + value >= 0 && team.score + value <= 21) {
     team.score += value 
     updateScoreboard()
   }
