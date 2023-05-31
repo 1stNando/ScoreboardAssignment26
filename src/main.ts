@@ -21,11 +21,22 @@ function updateScoreboard() {
   const team1NameElement = document.getElementById('team1-name')!
   const team2NameElement = document.getElementById('team2-name')!
 
+  const winnerMessageElement = document.getElementById("winner-message")
+
   // Update the score display for each team
   team1ScoreElement.innerText = team1.score.toString()
   team2ScoreElement.innerText = team2.score.toString()
   team1NameElement.innerText = team1.name
   team2NameElement.innerText = team2.name
+
+  // Check if any team has reached 21 points
+  if (team1.score === 21) {
+    winnerMessageElement.innerText = `${team1.name} won!!!!`;
+  } else if (team2.score === 21) {
+    winnerMessageElement.innerText = `${team2.name} won!!!`;
+  } else {
+    winnerMessageElement.innerText = "";
+  }
 }
 
 // Function to handle name changes
@@ -91,5 +102,19 @@ if (team2SubtractButton) {
   });
 }
 
+// Function to hande scoreboard reset
+function resetScoreboard() {
+  team1.score = 0
+  team2.score = 0
+  updateScoreboard()
+}
+
+// Add event listener to the reset button
+const resetButton = document.getElementById("reset-button")
+if (resetButton) {
+  resetButton.addEventListener("click", () => {
+    resetScoreboard()
+  })
+}
 // Initialize the scoreboard display
 updateScoreboard()
