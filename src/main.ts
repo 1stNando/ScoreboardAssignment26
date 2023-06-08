@@ -22,7 +22,7 @@ function updateScoreboard() {
   const team2NameElement = document.getElementById('team2-name')!
 
   // Handle a winner message via TS
-  const winnerMessageElement = document.getElementById("winner-message")
+  const winnerMessageElement = document.getElementById("winner-message")!
 
   // Update the score display for each team
   team1ScoreElement.innerText = team1.score.toString()
@@ -30,7 +30,7 @@ function updateScoreboard() {
   team1NameElement.innerText = team1.name
   team2NameElement.innerText = team2.name
 
-  // Check if any team has reached 21 points
+  // When any team.score reaches 21, toggle on the "winnerMessageElement". This will dynamically turn on/off the innerText of the HTML object id="winner-message" which sits empty "" in the index.html of the project.
   if (team1.score === 21) {
     winnerMessageElement.innerText = `${team1.name} won!!!!`;
   } else if (team2.score === 21) {
