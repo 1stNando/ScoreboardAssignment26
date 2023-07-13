@@ -38,9 +38,9 @@ function updateScoreboard() {
   } else {
     winnerMessageElement.innerText = "";
   }
-}
+} // closing updateScoreboard()
 
-// Function to handle name changes
+// Function to handle name changes. It is EVENT HANDLER.
 function handleNameChange(event: Event, team: Team) {
   const inputElement = event.target as HTMLInputElement
   if (inputElement) {
@@ -49,7 +49,7 @@ function handleNameChange(event: Event, team: Team) {
   }
 }
 
-// Function to handle score updates
+// EVENT HANDLER. The handleScoreUpdate function is an event handler for the click event on the score buttons. It takes a team and a value parameter, representing the team to update and the amount by which to update the score. It checks if the new score will be within the range of 0 to 21 and updates the score property of the team accordingly. After updating the score, it calls updateScoreboard to reflect the change.
 function handleScoreUpdate(_event: Event, team: Team, value: number) {
   if (team.score + value >= 0 && team.score + value <= 21) {
     team.score += value 
@@ -103,7 +103,7 @@ if (team2SubtractButton) {
   });
 }
 
-// Function to hande scoreboard reset
+// Function to handle scoreboard reset
 function resetScoreboard() {
   team1.score = 0
   team2.score = 0
